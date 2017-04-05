@@ -1,0 +1,44 @@
+<header>
+  
+  <div class = "container">
+    
+    <div class = "logo">
+      <h1><a class = "mains" href = "/"> Main page</a></h1>
+    </div>
+
+    <% if current_user %>
+
+      <div class = "nav1">
+
+        <ul>
+          <li class = "li2", id = "header_user_link">
+
+            <div class = "user_mini_avatar"><span class = "user_mini_avatar_text"><%= current_user.name %>
+
+          </li>
+          <li class = "li2"><div class = "header_sign_out"><%= link_to "Sign out", sign_out_path %></div></li>
+
+          <li><% if current_admin? %>
+            <button onclick="location.href = '/admin'">Admin part</button>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+
+    <% else %>
+      
+      <div class = "nav1">
+        <ul class = "ul2">
+        	<li class = "li2", id = "header_sign_in"><%= link_to 'Tw', "/auth/twitter" %>
+          
+          </li> 
+        </ul>
+      </div>
+
+    <%end%>
+
+  </div>
+    
+</header>
+
+<div class = "d"></div>

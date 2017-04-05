@@ -1,0 +1,31 @@
+  <div>
+	  <% @recomends.each do |recomend| %>
+
+      <div>
+        <%= recomend.body %>
+  	    <%= recomend.sender %>
+        Mark <%= recomend.mark %>
+      </div>
+
+	  <% end %>
+  </div>
+
+<% if current_user %> 
+
+
+  <div>
+    <%= simple_form_for [@place, @recomend] do |recomend| %>
+
+      <%= recomend.hidden_field :recomend_type, value: 'Place' %>
+      <%= recomend.hidden_field :recomend_id, value: @place.id %>
+      <%= recomend.hidden_field :user_id, value: current_user.id %>
+      <%= recomend.hidden_field :sender, value: current_user.name %>
+      <%= recomend.hidden_field :place_id, value: @place.id %>
+
+      <%= recomend.input :body %>
+      <%= recomend.input :mark %>
+      <p><%= recomend.submit 'Sent recomend' %></p>
+
+    <% end %>
+  </div>
+<% end %>

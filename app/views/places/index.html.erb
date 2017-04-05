@@ -1,0 +1,16 @@
+<h1>All places</h1>
+
+<% if @places.empty? %>
+  <h3>No one place found</h3>
+<% else %>
+  
+  <% @places.each do |place| %>
+ 
+    <p><%= link_to place.name, place_path(place) %></p>
+
+  <% end %>
+
+<% end %>   
+
+<br/>
+<%= link_to 'New place', new_place_path %> 
