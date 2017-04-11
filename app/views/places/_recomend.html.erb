@@ -5,6 +5,9 @@
         <%= recomend.body %>
   	    <%= recomend.sender %>
         Mark <%= recomend.mark %>
+        <% if recomend.user_id == current_user.id %>
+          <%= link_to 'Sent tweet', place_new_tweet_path(@place, recomend.id) %>
+        <% end %>  
       </div>
 
 	  <% end %>

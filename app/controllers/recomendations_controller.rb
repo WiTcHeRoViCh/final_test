@@ -1,7 +1,6 @@
 class RecomendationsController < ApplicationController
 
-	def create
-		binding.pry
+  def create
     Recomendation.create(params_recomend)
     redirect_back fallback_location: root_path
   end	

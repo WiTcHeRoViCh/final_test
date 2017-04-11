@@ -33,6 +33,7 @@ gem 'omniauth-twitter'
 gem 'pry'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
+gem 'twitter'
 
 
 group :development, :test do
