@@ -16,6 +16,7 @@ div.logo {
 
 .nav1{
 	float: right;
+	margin-right: 17%;
 }
 
 
@@ -30,12 +31,12 @@ li {
 li.li2 {
 	color: #00008B;
   float: left;
-	margin-left: 15px;
-  margin-top: 3%;
+	margin-left: 25px;
+	margin-top: 7%;
 }
 
 div.header_sign_out {
-	position: relative; top: 15px;
+	position: relative; 
 }
 
 ul.ul2 {
@@ -84,7 +85,7 @@ div.user_mini_avatar {
 }
 
 span.user_mini_avatar_text {
-	position: relative; bottom: 17px;
+	position: relative; 
 }
 
 

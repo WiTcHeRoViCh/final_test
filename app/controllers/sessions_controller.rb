@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController 
 
-	def create
+  def create
 		user = User.find_or_create_by(name: auth_params['info']['name'])
 		if user.save
 		  session[:user_id] = user.id

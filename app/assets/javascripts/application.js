@@ -13,3 +13,19 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+	var modal = $('#modal')[0];
+
+	$(document).on("click", function(event){
+		if (event.target == modal) {
+  		$('#modal').css('display', 'none');
+		}
+	});
+
+	$('#admin_p').on("click", function() {
+  	$('#modal').toggle();
+	});
+
+});
